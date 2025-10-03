@@ -108,11 +108,31 @@ public class LoginActivity extends AppCompatActivity {
     private void showLoginForm() {
         if (loginForm != null) loginForm.setVisibility(View.VISIBLE);
         if (signupForm != null) signupForm.setVisibility(View.GONE);
+        
+        // Update button colors - Login clicked (white), Sign Up not clicked (orange)
+        if (loginToggleButton != null) {
+            loginToggleButton.setBackgroundTintList(getResources().getColorStateList(android.R.color.white));
+            loginToggleButton.setTextColor(getResources().getColor(android.R.color.black));
+        }
+        if (signupToggleButton != null) {
+            signupToggleButton.setBackgroundTintList(getResources().getColorStateList(android.R.color.holo_orange_dark));
+            signupToggleButton.setTextColor(getResources().getColor(android.R.color.white));
+        }
     }
 
     private void showSignupForm() {
         if (loginForm != null) loginForm.setVisibility(View.GONE);
         if (signupForm != null) signupForm.setVisibility(View.VISIBLE);
+        
+        // Update button colors - Sign Up clicked (white), Login not clicked (orange)
+        if (signupToggleButton != null) {
+            signupToggleButton.setBackgroundTintList(getResources().getColorStateList(android.R.color.white));
+            signupToggleButton.setTextColor(getResources().getColor(android.R.color.black));
+        }
+        if (loginToggleButton != null) {
+            loginToggleButton.setBackgroundTintList(getResources().getColorStateList(android.R.color.holo_orange_dark));
+            loginToggleButton.setTextColor(getResources().getColor(android.R.color.white));
+        }
     }
 
 

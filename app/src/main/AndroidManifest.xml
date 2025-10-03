@@ -16,21 +16,21 @@
         android:theme="@style/Theme.MyApplication"> 
 
         <activity
-            android:name=".LoginActivity"
-            android:exported="false" /> <!-- login screen, opened from splash -->
-
-        <activity
             android:name=".MainActivity"
-            android:exported="true"> <!-- splash activity is the launcher -->
-            <intent-filter>
+            android:exported="true">
+             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".ownerActivity"
-            android:exported="false" /> <!-- owner dashboard, opened from login -->
+            android:exported="false" />
 
     </application>
 
