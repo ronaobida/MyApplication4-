@@ -1,4 +1,5 @@
 package com.example.myapplication;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -69,8 +70,7 @@ public class ownerActivity extends AppCompatActivity {
         staffButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: Replace with your staff fragment
-                // loadFragment(new staffnav());
+                loadFragment(new com.example.myapplication.staffnav());
                 setActiveButton(staffButton);
             }
         });
@@ -78,8 +78,7 @@ public class ownerActivity extends AppCompatActivity {
         subsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: Replace with your subs fragment
-                // loadFragment(new subsnav());
+                loadFragment(new com.example.myapplication.subsnav());
                 setActiveButton(subsButton);
             }
         });
@@ -87,8 +86,7 @@ public class ownerActivity extends AppCompatActivity {
         messButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: Replace with your mess fragment
-                // loadFragment(new messnav());
+                loadFragment(new com.example.myapplication.messnav());
                 setActiveButton(messButton);
             }
         });
@@ -96,8 +94,7 @@ public class ownerActivity extends AppCompatActivity {
         reportButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: Replace with your report fragment
-                // loadFragment(new reportnav());
+                loadFragment(new com.example.myapplication.reportnav());
                 setActiveButton(reportButton);
             }
         });
@@ -184,7 +181,11 @@ public class ownerActivity extends AppCompatActivity {
         
         findViewById(R.id.menu_logout).setOnClickListener(v -> {
             closeMenu();
-            // TODO: Handle logout click
+            // Perform logout - redirect to login activity
+            Intent intent = new Intent(ownerActivity.this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
         });
         
         // Close menu when overlay is clicked
@@ -206,9 +207,9 @@ public class ownerActivity extends AppCompatActivity {
     private void openMenu() {
         if (!isMenuOpen) {
             menuOverlay.setVisibility(View.VISIBLE);
-            menuDrawer.setTranslationX(280f); // Start off-screen on the right
+            menuDrawer.setTranslationX(300f); // Start off-screen on the right
             
-            Animation slideIn = new TranslateAnimation(280f, 0f, 0f, 0f);
+            Animation slideIn = new TranslateAnimation(300f, 0f, 0f, 0f);
             slideIn.setDuration(300);
             slideIn.setFillAfter(true);
             
@@ -219,7 +220,7 @@ public class ownerActivity extends AppCompatActivity {
     
     private void closeMenu() {
         if (isMenuOpen) {
-            Animation slideOut = new TranslateAnimation(0f, 280f, 0f, 0f);
+            Animation slideOut = new TranslateAnimation(0f, 300f, 0f, 0f);
             slideOut.setDuration(300);
             slideOut.setFillAfter(true);
             

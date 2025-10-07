@@ -13,7 +13,7 @@ public class staffnav extends Fragment {
     @NonNull
     @Nullable
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.homenav_fragment, container, false);
+        View view = inflater.inflate(R.layout.staffnav_fragment, container, false);
         return view;
     }
 }
