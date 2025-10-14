@@ -12,8 +12,6 @@
         android:layout_height="wrap_content">
 
         <!-- Header -->
-
-        <!-- Search Bar -->
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
@@ -26,13 +24,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- Search Bar -->
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="358dp"
-            android:layout_height="46dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:background="#E3F2FD"
-             android:gravity="center_vertical"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
             android:padding="12dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +42,8 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginEnd="8dp"
-                android:src="@android:drawable/ic_menu_search" />
+                android:src="@android:drawable/ic_menu_search"
+                android:contentDescription="Search Icon" />
 
             <EditText
                 android:layout_width="0dp"
@@ -51,23 +51,23 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:hint="Search conversations..."
+                android:imeOptions="actionSearch"
+                android:inputType="text"
                 android:textSize="16sp" />
         </LinearLayout>
 
-
+        <!-- Chat List Container -->
         <LinearLayout
-            android:layout_width="384dp"
-            android:layout_height="593dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:orientation="vertical"
             android:padding="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.592"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
+            <!-- Chat Item 1 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
                 android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="#E3F2FD"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="0dp">>
+                app:cardElevation="0dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -87,14 +87,13 @@
                     android:orientation="horizontal"
                     android:padding="16dp">
 
-
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:background="@android:color/darker_gray"
                         android:scaleType="centerCrop"
-                        android:src="@android:drawable/ic_menu_gallery" />
-
+                        android:src="@android:drawable/ic_menu_gallery"
+                        android:contentDescription="User Profile Picture" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -120,7 +119,6 @@
                             android:textSize="14sp" />
                     </LinearLayout>
 
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -130,6 +128,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <!-- Chat Item 2 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -140,7 +139,7 @@
                 android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="#E3F2FD"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="0dp">>
+                app:cardElevation="0dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -154,7 +153,8 @@
                         android:layout_height="50dp"
                         android:background="@android:color/darker_gray"
                         android:scaleType="centerCrop"
-                        android:src="@android:drawable/ic_menu_gallery" />
+                        android:src="@android:drawable/ic_menu_gallery"
+                        android:contentDescription="User Profile Picture" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -189,6 +189,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <!-- Chat Item 3 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -199,7 +200,7 @@
                 android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="#E3F2FD"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="0dp">>
+                app:cardElevation="0dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -213,7 +214,8 @@
                         android:layout_height="50dp"
                         android:background="@android:color/darker_gray"
                         android:scaleType="centerCrop"
-                        android:src="@android:drawable/ic_menu_gallery" />
+                        android:src="@android:drawable/ic_menu_gallery"
+                        android:contentDescription="User Profile Picture" />
 
                     <LinearLayout
                         android:layout_width="0dp"
