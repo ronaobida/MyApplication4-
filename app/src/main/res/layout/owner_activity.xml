@@ -73,7 +73,14 @@
         app:layout_constraintBottom_toTopOf="@+id/navigation_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton12" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButton12" >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/payment_sparx" />
+    </FrameLayout>
 
     <!-- Your Original Bottom Navigation Bar -->
     <LinearLayout
@@ -149,7 +156,9 @@
             android:background="@android:color/transparent"
             android:padding="8dp"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/report" />
+            app:srcCompat="@drawable/payment_sparx" />
+
+
     </LinearLayout>
 
     <!-- Side Menu Overlay -->
@@ -159,10 +168,10 @@
         android:layout_height="match_parent"
         android:background="#80000000"
         android:clickable="true"
-        android:focusable="true"
         android:elevation="10dp"
+        android:focusable="true"
         android:visibility="gone"
-        tools:visibility="visible">
+        tools:visibility="gone">
 
         <LinearLayout
             android:id="@+id/menu_drawer"
@@ -230,7 +239,8 @@
                         android:background="@drawable/menu_item_background"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
-                        android:paddingStart="16dp" android:paddingEnd="16dp">
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
 
                         <ImageView
                             android:layout_width="60dp"
@@ -254,7 +264,8 @@
                         android:background="@drawable/menu_item_background"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
-                        android:paddingStart="16dp" android:paddingEnd="16dp">
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
 
                         <ImageView
                             android:layout_width="60dp"
@@ -278,7 +289,8 @@
                         android:background="@drawable/menu_item_background"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
-                        android:paddingStart="16dp" android:paddingEnd="16dp">
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
 
                         <ImageView
                             android:layout_width="60dp"
@@ -310,7 +322,8 @@
                         android:background="@drawable/menu_item_background"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
-                        android:paddingStart="16dp" android:paddingEnd="16dp">
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
 
                         <TextView
                             android:layout_width="wrap_content"

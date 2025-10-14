@@ -27,8 +27,8 @@ import java.util.concurrent.Executors;
 public class LoginActivity extends AppCompatActivity {
 
     // --- URLs for your API ---
-    private static final String LOGIN_URL = "http://192.168.4.107/sparx-api/login.php";
-    private static final String SIGNUP_URL = "http://192.168.4.107/sparx-api/signup.php";
+    private static final String LOGIN_URL = "http://192.168.100.120:8081/sparx-api/login.php";
+    private static final String SIGNUP_URL = "http://192.168.100.120:8081/sparx-api/signup.php";
 
     // --- Views for UI Toggling ---
     private View loginForm;
