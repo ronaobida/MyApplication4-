@@ -1,5 +1,39 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">MyApplication</string>
+
+    <!-- Subscriber strings -->
+    <string name="welcome">Welcome</string>
+    <string name="nav_home_button">Home</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="about_us">About Us</string>
+    <string name="log_out">Log Out</string>
+    <string name="chats">Chats</string>
+    <string name="amount_due">Amount Due</string>
+    <string name="payment_history">Payment History</string>
+
+    <!-- Technician landing -->
+    <string name="tech_welcome">Welcome, Technician</string>
+    <string name="tech_on_duty">On Duty</string>
+    <string name="tech_time_in">Time-in: %1$s</string>
+    <string name="qa_title">Quick Actions</string>
+
+    <string name="card_tasks_title">Task Inbox</string>
+    <string name="card_tasks_sub">View &amp; accept today’s tasks</string>
+
+    <string name="card_inventory_title">Inventory</string>
+    <string name="card_inventory_sub">Checkout tools &amp; materials</string>
+
+    <string name="card_map_title">Subscriber Map</string>
+    <string name="card_map_sub">View route &amp; network</string>
+
+    <string name="card_messages_title">Messages</string>
+    <string name="card_messages_sub">Contact subscribers/dispatcher</string>
+
+    <string name="card_summary_title">Work Summary</string>
+    <string name="card_summary_sub">Photos, notes, signatures</string>
+
+    <string name="card_timeout_title">Time Out</string>
+    <string name="card_timeout_sub">End shift &amp; save attendance</string>
+
+    <string name="menu_content_desc">Menu</string>
 </resources>

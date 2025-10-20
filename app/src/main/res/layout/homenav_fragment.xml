@@ -27,6 +27,7 @@
 
             <!-- Card 1: Active Technicians -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/active_tech_card"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -54,6 +55,7 @@
                         android:textSize="12sp" />
 
                     <TextView
+                        android:id="@+id/active_tech_count"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -65,6 +67,7 @@
 
             <!-- Card 2: Checked-in Today -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/checked_in_card"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -92,6 +95,7 @@
                         android:textSize="12sp" />
 
                     <TextView
+                        android:id="@+id/checked_in_count"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -142,6 +146,7 @@
                         android:layout_marginTop="8dp" />
 
                     <TextView
+                        android:id="@+id/pending_requests_count"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="3"
@@ -153,6 +158,7 @@
 
             <!-- Card 4: New Messages -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/messages_card"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -180,6 +186,7 @@
                         android:layout_marginTop="8dp" />
 
                     <TextView
+                        android:id="@+id/new_messages_count"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="2"

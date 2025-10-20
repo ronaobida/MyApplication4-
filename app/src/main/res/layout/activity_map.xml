@@ -50,6 +50,14 @@
                 android:layout_marginTop="8dp"
                 android:text="John Doe - Online - Camarines Norte\nJane Smith - Online - Camarines Norte"
                 android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnUseLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Use Selected Location"
+                android:layout_marginTop="12dp" />
+
             <!-- Recent Activities Section -->
             <TextView
                 android:id="@+id/recent_activities_title"

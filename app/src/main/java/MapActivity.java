@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -10,10 +11,13 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import android.widget.TextView;
+import android.widget.Button;
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
     private GoogleMap mMap;
     private TextView technicianSummary;
+    private Button btnUseLocation;
+    private LatLng selected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +26,23 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
         // Initialize summary text view
         technicianSummary = findViewById(R.id.technician_summary);
+        btnUseLocation = findViewById(R.id.btnUseLocation);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        if (btnUseLocation != null) {
+            btnUseLocation.setOnClickListener(v -> {
+                if (selected != null) {
+                    Intent data = new Intent();
+                    data.putExtra("selectedLat", selected.latitude);
+                    data.putExtra("selectedLng", selected.longitude);
+                    setResult(RESULT_OK, data);
+                    finish();
+                }
+            });
+        }
     }
 
     @Override
@@ -37,6 +54,14 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
         // Set map to show all markers
         setMapToShowAllMarkers();
+
+        // Allow selecting a point with long-press
+        mMap.setOnMapLongClickListener(latLng -> {
+            selected = latLng;
+            mMap.clear();
+            addTechnicianMarkers();
+            mMap.addMarker(new MarkerOptions().position(latLng).title("Selected Location"));
+        });
     }
 
     private void addTechnicianMarkers() {

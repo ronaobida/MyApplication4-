@@ -1,19 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:background="@android:color/white"
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to Report Fragment!"
-        android:textSize="24sp"
-        android:textColor="#094bae"
-        android:layout_margin="32dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/txtReportTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reports"
+            android:textSize="28sp"
+            android:textColor="#094bae"
+            android:textStyle="bold"
+            android:layout_margin="32dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTotalTasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Tasks: 0"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtReportTitle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtCompletedTasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completed: 0"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtTotalTasks"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtPendingTasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pending: 0"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtCompletedTasks"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtRevenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estimated Revenue: ₱0"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtPendingTasks"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTechnicianPayrollHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Technician Payroll"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#094bae"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/txtRevenue"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTechnicianPayroll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/txtTechnicianPayrollHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txtRevenueHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Revenue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#094bae"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/recyclerTechnicianPayroll"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChartRevenue"
+            android:layout_width="0dp"
+            android:layout_height="220dp"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@id/txtRevenueHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
