@@ -1,5 +1,3 @@
-package com.example.myapplication;
-
 import androidx.fragment.app.Fragment;
 
 import android.view.View;
