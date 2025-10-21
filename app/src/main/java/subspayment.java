@@ -1,5 +1,8 @@
+<<<<<<<< HEAD:app/src/main/java/subspayment.java
 package com.example.myapplication;
 
+========
+>>>>>>>> origin/main:app/src/main/java/subsnav.java
 import androidx.fragment.app.Fragment;
 
 import android.view.View;
@@ -10,6 +13,10 @@ import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 
 import com.example.myapplication.R;
+<<<<<<<< HEAD:app/src/main/java/subspayment.java
+========
+
+>>>>>>>> origin/main:app/src/main/java/subsnav.java
 
 public class subspayment extends Fragment{
     @NonNull
