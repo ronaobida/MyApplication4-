@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.example.myapplication"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.myapplication"
-        minSdk = 26
-        targetSdk = 34
+        minSdk = 28
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -38,27 +38,22 @@ android {
 }
 
 dependencies {
-	implementation("com.google.android.gms:play-services-maps:19.2.0")
+	implementation(libs.play.services.maps)
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.analytics)
-    implementation(libs.firebase.messaging)
     implementation("com.google.firebase:firebase-database")
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
+    implementation("androidx.appcompat:appcompat:1.7.1")
     implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.cardview)
-    implementation ("androidx.appcompat:appcompat:1.7.1")
-    implementation ("com.google.firebase:firebase-auth")
     implementation(libs.androidx.fragment)
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
     testImplementation(libs.junit)
-
+    implementation(libs.firebase.messaging)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.google.zxing:core:3.5.3") //dagdag
 }
